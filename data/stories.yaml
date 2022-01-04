@@ -1,0 +1,40 @@
+version: '2.0'
+stories:
+  - story: main_path
+    steps:
+      - intent: confirm
+      - action: utter_question_positive
+      - intent: confirm
+      - action: utter_more_info
+      - intent: confirm
+      - action: utter_more_question
+      - intent: age
+      - action: utter_appointment
+      - intent: confirm
+      - action: utter_ending
+  - story: main_path + confirm instead of age
+    steps:
+      - intent: confirm
+      - action: utter_question_positive
+      - intent: confirm
+      - action: utter_more_info
+      - intent: confirm
+      - action: utter_more_question
+      - intent: confirm
+      - action: utter_appointment
+      - intent: confirm
+      - action: utter_ending
+  - story: main_path + already_done
+    steps:
+      - intent: confirm
+      - action: utter_question_positive
+      - intent: confirm
+      - action: utter_more_info
+      - intent: already_done
+      - action: utter_ending
+  - story: main_path + already_done
+    steps:
+      - intent: confirm
+      - action: utter_question_positive
+      - intent: already_done
+      - action: utter_ending
